@@ -13,7 +13,7 @@
 #board55{
     height: 250px;
     width: 250px;
-    border: solid black 2px;
+    border: solid green 2px;
     margin: auto auto;
     margin-top: 50px;
     visibility: hidden;
@@ -22,6 +22,6 @@
 .tile{
     height: 50px;
     width: 50px;
-    box-shadow: inset 0px 0px 0px 0.6px black;
+    box-shadow: inset 0px 0px 0px 0.6px green;
     position: absolute;
 }

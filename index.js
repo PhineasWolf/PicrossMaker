@@ -1,11 +1,12 @@
 let puzzleMaker = (x) => {
-    console.log('hello')
     for(let i = 1; i <= x; i++){
         let div = document.createElement('div')
         div.setAttribute('class', 'tile')
         div.setAttribute('id', `tile-${i}`)
-        div.setAttribute('onclick', 'clicked(this.id)')
+        div.setAttribute('onclick', `clicked(this.id, ${x})`)
         document.getElementById('board55').appendChild(div)
+
+        document.getElementById(`tile-${i}`).style.background = 'lightgreen'
 
         if(x === 25){
             document.getElementById('board55').style.visibility = 'visible'
@@ -36,6 +37,14 @@ let puzzleMaker = (x) => {
     }
 }
 
-let clicked = (tile) => {
-    console.log(document.getElementById(tile).style.marginTop+' '+document.getElementById(tile).style.marginLeft)
+let clicked = (tile, x) => {
+    tile = document.getElementById(tile)
+    if(tile.style.background === 'lightgreen'){
+        tile.style.background = 'darkgreen'
+        //tile.style.boxShadow = 'inset 0px 0px 0px 0.6px white'
+    }else if(tile.style.background === 'darkgreen'){
+        tile.style.background = 'lightgreen'
+        //tile.style.boxShadow = 'inset 0px 0px 0px 0.6px black'
+    }
+    
 }
