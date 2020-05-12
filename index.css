@@ -10,12 +10,21 @@
     align-items: center;
 }
 
-#board55{
+#board5x5{
     height: 250px;
     width: 250px;
     border: solid green 2px;
     margin: auto auto;
     margin-top: 50px;
+    visibility: hidden;
+}
+
+#board10x10{
+    height: 500px;
+    width: 500px;
+    border: solid green 2px;
+    margin: auto auto;
+    margin-top: -250px;
     visibility: hidden;
 }
 
