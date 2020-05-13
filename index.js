@@ -17,7 +17,7 @@ let puzzleMaker = (x, board, n) => {
             div.setAttribute('onclick', `clicked(this.id, ${x})`)
             document.getElementById(board).appendChild(div)
 
-            document.getElementById(`tile-${n}-${i}`).style.background = 'lightgreen'
+            
             
             if(x === 25){
                 if(i <= 5){
@@ -90,6 +90,9 @@ let puzzleMaker = (x, board, n) => {
                 }
             }
         }
+    }
+    for(let i = 1; i <= x; i++){
+        document.getElementById(`tile-${n}-${i}`).style.background = 'lightgreen'
     }
 }
 
